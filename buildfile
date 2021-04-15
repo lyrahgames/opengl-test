@@ -1,23 +1,19 @@
 cxx.std = latest
 using cxx
 
+hxx{*}: extension = hpp
+cxx{*}: extension = cpp
+
+test.target = $cxx.target
+
 libs =
 import libs += glfw3%lib{glfw3}
 import libs += glbinding%lib{glbinding}
+import libs += glm%lib{glm}
 
-if ($cc.target.class == 'linux')
+exe{opengl-test}: {hxx cxx}{**} $libs
 {
-  info 'linux'
-  import libs += glm%lib{glm}
-}
-elif ($cc.target.class == 'windows')
-{
-  info 'windows'
-  if ($cc.target.system == 'mingw32')
-  {
-    info 'mingw32'
-    cc.libs += -lgdi32
-  }
+  test = true
 }
 
-exe{main}: cxx{main.cpp} $libs
+cxx.poptions =+ "-I$src_root"
