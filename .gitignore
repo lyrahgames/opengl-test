@@ -1,0 +1,13 @@
+*
+!*/
+
+!*.hpp
+!*.cpp
+
+!buildfile
+
+!screenshot.png
+!README.md
+!LICENSE
+
+!.gitignore
