@@ -10,11 +10,11 @@ Simple OpenGL test application that should render a colored triangle on the scre
 - C++ Standard: C++17
 - C++ Compiler: GCC | Clang | Nuwen MinGW | MinGW | MSVC
 - Operating System: Linux | Windows
-- Build System: [build2](https://build2.org)
+- Build System: [build2](https://build2.org) >= 0.13.0
 - Libraries:
-    + [glbinding](https://glbinding.org/)
-    + [GLFW](https://www.glfw.org/)
-    + [GLM](https://glm.g-truc.net/0.9.9/index.html)
+    + [glbinding](https://glbinding.org/) ^ 3.0.0
+    + [GLFW](https://www.glfw.org/) ^ 3.0.0
+    + [GLM](https://glm.g-truc.net/0.9.9/index.html) ^ 0.9.9
 
 ## Build System Explanation
 This simple test consists mainly of the `buildfile` and the `main.cpp` file.
