@@ -163,7 +163,7 @@ void init() {
 
   // Update private state.
   is_initialized = true;
-  cout << "Created application without errors!" << endl;
+  cout << "Created OpenGL test application without errors!" << endl;
 }
 
 void free() {
@@ -183,7 +183,7 @@ void free() {
 
   // Update private state.
   is_initialized = false;
-  cout << "Destroyed application without errors!" << endl;
+  cout << "Destroyed OpenGL test application without errors!" << endl;
 }
 
 void run() {
