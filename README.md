@@ -1,20 +1,64 @@
-# OpenGL Test
-Simple OpenGL test application that should render a colored triangle on the screen.
+<h1 align="center">
+    OpenGL Test
+</h1>
 
-![Screenshot](screenshot.png)
+<p align="center">
+    Simple OpenGL Application Rendering a Colored Triangle to Test the Configuration of the Development Environment
+</p>
 
-## Author
-- lyrahgames (lyrahgames@mailbox.org)
+<p align="center">
+    <img src="https://img.shields.io/github/languages/top/lyrahgames/opengl-test.svg?style=for-the-badge">
+    <img src="https://img.shields.io/github/languages/code-size/lyrahgames/opengl-test.svg?style=for-the-badge">
+    <img src="https://img.shields.io/github/repo-size/lyrahgames/opengl-test.svg?style=for-the-badge">
+    <a href="COPYING.md">
+        <img src="https://img.shields.io/github/license/lyrahgames/opengl-test.svg?style=for-the-badge&color=blue">
+    </a>
+</p>
+
+<p align="center">
+    <img src="screenshot.png">
+</p>
 
 ## Requirements
-- C++ Standard: C++17
-- C++ Compiler: GCC | Clang | Nuwen MinGW | MinGW | MSVC
-- Operating System: Linux | Windows
-- Build System: [build2](https://build2.org) >= 0.13.0
-- Libraries:
-    + [glbinding](https://glbinding.org/) ^ 3.0.0
-    + [GLFW](https://www.glfw.org/) ^ 3.0.0
-    + [GLM](https://glm.g-truc.net/0.9.9/index.html) ^ 0.9.9
+
+<b>
+<table align="center">
+    <tr>
+        <td>Language Standard:</td>
+        <td>C++17</td>
+    </tr>
+    <tr>
+        <td>Operating System:</td>
+        <td>Linux | Windows</td>
+    </tr>
+    <tr>
+        <td>Compiler:</td>
+        <td>GCC | Clang | Nuwen MinGW | MinGW | MSVC</td>
+    </tr>
+    <tr>
+        <td>Build System:</td>
+        <td>
+            <a href="https://build2.org/">build2</a> | manually
+        </td>
+    </tr>
+    <tr>
+        <td>Dependencies:</td>
+        <td>
+            <a href="https://glbinding.org/">
+                glbinding ^ 3.1.0
+            </a>
+            <br>
+            <a href="https://www.glfw.org/">
+                GLFW ^ 3.3.4
+            </a>
+            <br>
+            <a href="https://github.com/g-truc/glm">
+                GLM ^ 0.9.9.8
+            </a>
+        </td>
+    </tr>
+</table>
+</b>
 
 ## Build System Explanation
 This simple test consists mainly of the `buildfile` and the `main.cpp` file.
@@ -102,3 +146,19 @@ Call the following command inside the developer prompt of the MSVC.
 
 ## Usage
 - Escape: Quit the program.
+
+## Additional Information
+- [Authors](AUTHORS.md)
+- [License](COPYING.md)
+
+## References
+- [Learn OpenGL](https://learnopengl.com/Getting-started/OpenGL)
+- [opengl-tutorial](https://www.opengl-tutorial.org/)
+- [build2 Toolchain Introduction](https://build2.org/build2-toolchain/doc/build2-toolchain-intro.xhtml)
+- [build2 Build System Manual](https://build2.org/build2/doc/build2-build-system-manual.xhtml)
+- [nuwen.net MinGW Distro](https://nuwen.net/mingw.html)
+- [glbinding](https://glbinding.org/)
+- [GLFW](https://www.glfw.org/)
+- [GLM](https://glm.g-truc.net/0.9.9/index.html)
+- [Khronos OpenGL Reference Pages](https://www.khronos.org/registry/OpenGL-Refpages/)
+- [GLSL Language Specification](https://www.khronos.org/registry/OpenGL/specs/gl/GLSLangSpec.4.50.pdf)

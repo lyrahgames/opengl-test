@@ -6,8 +6,10 @@
 
 !buildfile
 
-!screenshot.png
-!README.md
-!LICENSE
+!*.md
 
-!.gitignore
+!.clang-format
+
+!screenshot.png
+
+!.git*
