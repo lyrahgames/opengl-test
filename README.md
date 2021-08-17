@@ -57,6 +57,23 @@ For a custom configuration, you can run something like the following.
         config.cxx=clang++ \
         "config.cxx.coptions=-O3 -march=native"
 
+### Statically Cross-Compile on Linux for Windows
+For 64-bit Windows platforms, you need to install the [Mingw-w64](https://www.mingw-w64.net) toolchain.
+Also you have to make sure to satisfy all the required dependencies for this kind of compiler.
+The best thing to do for now is compile statically.
+Hence, you need to be able to access `libglbinding.a` and `libglfw3.a`.
+A static variant of GLFW can be officially downloaded from [here](https://www.glfw.org/download.html).
+For a static variant of `glbinding`, one has to manually compile it with a custom CMake toolchain file.
+One also needs to put all headers from GLM, glbinding, and GLFW into the include directory.
+Assuming all manually installed libraries can be found by using the prefix `/usr/local/x86_64-w64-mingw32`, the following command should create an executable `opengl-test.exe` runnable on Windows and by using Wine also on Linux (for this prepend test before the variable definitions).
+
+    b \
+        config.cxx=x86_64-w64-mingw32-g++ \
+        config.cxx.poptions="-I/usr/local/x86_64-w64-mingw32/include" \
+        config.cxx.coptions=-O3 \
+        config.cxx.loptions="-L/usr/local/x86_64-w64-mingw32/lib -fPIC -static -static-libgcc -static-libstdc++" \
+        config.cxx.libs="-lgdi32"
+
 ### Windows
 #### Nuwen MinGW Compiler Distribution
 On Windows, I recommend to use the [Nuwen MinGW compiler distribution](https://nuwen.net/mingw.html) because in this distribution of MinGW all needed dependencies are already installed.
